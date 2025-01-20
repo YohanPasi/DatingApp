@@ -2,6 +2,7 @@ using System;
 using API.Data;
 using API.Entities;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 
 namespace API.UsersControllers;
 
@@ -14,17 +15,19 @@ public class UsersController(DataContext context) : ControllerBase
 {
    
     [HttpGet] //List down Users
-    public ActionResult<IEnumerable<AppUser>> GetUsers()
+
+    // [Route("all")]
+    public async Task <ActionResult<IEnumerable<AppUser>>> GetUsers()
     {
-        var users = context.Users.ToList();
+        var users = await context.Users.ToListAsync();
 
         return Ok(users);
     }
 
     [HttpGet("{id:int}")] //  /api/users/2
-    public ActionResult<AppUser> GetUsers(int id)
+    public async Task <ActionResult<AppUser>> GetUsers(int id)
     {
-        var user = context.Users.Find();
+        var user = await context.Users.FindAsync(id);
 
         if(user == null) return NotFound();
 
