@@ -154,3 +154,11 @@ D:\Yohan\Learnings\Projects\DatingApp\server\API\bin\Debug\net9.0\runtimes\win-a
 D:\Yohan\Learnings\Projects\DatingApp\server\API\bin\Debug\net9.0\runtimes\win-x64\native\e_sqlite3.dll
 D:\Yohan\Learnings\Projects\DatingApp\server\API\bin\Debug\net9.0\runtimes\win-x86\native\e_sqlite3.dll
 D:\Yohan\Learnings\Projects\DatingApp\server\API\obj\Debug\net9.0\API.sourcelink.json
+D:\Yohan\Learnings\Projects\DatingApp\server\API\bin\Debug\net9.0\Microsoft.IdentityModel.Abstractions.dll
+D:\Yohan\Learnings\Projects\DatingApp\server\API\bin\Debug\net9.0\Microsoft.IdentityModel.JsonWebTokens.dll
+D:\Yohan\Learnings\Projects\DatingApp\server\API\bin\Debug\net9.0\Microsoft.IdentityModel.Logging.dll
+D:\Yohan\Learnings\Projects\DatingApp\server\API\bin\Debug\net9.0\Microsoft.IdentityModel.Tokens.dll
+D:\Yohan\Learnings\Projects\DatingApp\server\API\bin\Debug\net9.0\System.IdentityModel.Tokens.Jwt.dll
+D:\Yohan\Learnings\Projects\DatingApp\server\API\bin\Debug\net9.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+D:\Yohan\Learnings\Projects\DatingApp\server\API\bin\Debug\net9.0\Microsoft.IdentityModel.Protocols.dll
+D:\Yohan\Learnings\Projects\DatingApp\server\API\bin\Debug\net9.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll

@@ -2,6 +2,7 @@ using System;
 using API.Controllers;
 using API.Data;
 using API.Entities;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 
@@ -11,10 +12,10 @@ namespace API.UsersControllers;
 
 //  [Route("api/[controller]")]
 
-
+[Authorize]
 public class UsersController(DataContext context) : BaseApiController
 {
-   
+    [AllowAnonymous]
     [HttpGet] //List down Users
 
     // [Route("all")]
