@@ -1,28 +1,29 @@
-using System;
 using System.Text;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.IdentityModel.Tokens;
-namespace API.Extentions;
 
-public static class IdentityServiceExtention
+namespace API.Extentions
 {
-    public static IServiceCollection AddIdentityService(this IServiceCollection services, IConfiguration config)
+    public static class IdentityServiceExtention
     {
-        services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
-    .AddJwtBearer(options =>
-    {
-        var tokenKey = config["TokenKey"] ?? throw new Exception("Token Key not found !");
-        options.TokenValidationParameters = new TokenValidationParameters
+        public static IServiceCollection AddIdentityService(this IServiceCollection services, IConfiguration config)
         {
-            ValidateIssuerSigningKey = true,
-            IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes("tokenKey")),
-            ValidateIssuer = false,
-            ValidateAudience = false
-        }; 
+
+            services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
+                .AddJwtBearer(options =>
+                {
+                    var tokenKey = config["TokenKey"] ?? throw new Exception("Token Key not found!");
+                    options.TokenValidationParameters = new TokenValidationParameters
+                    {
+                        ValidateIssuerSigningKey = true,
+                        IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(tokenKey)),
+                        ValidateIssuer = false,
+                        ValidateAudience = false
+                    };
+                });
+
+            return services;
+        }
+        
     }
-    );
-
-    return services;
-
-    }   
 }
