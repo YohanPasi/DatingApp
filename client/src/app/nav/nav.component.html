@@ -1,0 +1,38 @@
+<nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark shadow" style="padding: 10px 20px; border-bottom: 2px solid #28a745;">
+    <div class="container">
+      <a class="navbar-brand text-light fw-bold" href="#" style="font-size: 1.3rem; letter-spacing: 1px;">
+        Date Me
+      </a>
+  
+      <div *ngIf="loggedIn" class="collapse navbar-collapse">
+        <ul class="navbar-nav me-auto mb-2 mb-md-0">
+          <li class="nav-item">
+            <a class="nav-link text-white fw-semibold" routerLink="/matches" style="margin-right: 15px;">
+              Matches
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-white fw-semibold" routerLink="/lists" style="margin-right: 15px;">
+              Lists
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-white fw-semibold" routerLink="/messages" style="margin-right: 15px;">
+              Messages
+            </a>
+          </li>
+        </ul>
+        <div dropdown class="dropdown">
+            <a dropdownToggle class="dropdown-toggle text-light" style="margin-right: 15px;"> Profile </a>
+            
+        <button class="btn btn-outline-success fw-bold" style="padding: 5px 20px; font-size: 0.9rem;" (click)="logout()">Logout</button>
+      </div>
+  
+      <ng-template #notLoggedIn>
+        <div class="collapse navbar-collapse justify-content-end">
+          <p class="text-white mb-0" style="font-size: 0.9rem;">Welcome to Date Me! Please log in.</p>
+        </div>
+      </ng-template>
+    </div>
+  
+  
