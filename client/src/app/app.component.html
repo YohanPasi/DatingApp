@@ -1,11 +1,21 @@
 <app-nav></app-nav>
-<app-login-form></app-login-form>
 
 <div class="container" style="margin-top: 100px;">
-  <!-- <ul>
-    <li *ngFor = "let user of users">
-          {{user.id}} - {{user.userName}}
-    </li>
-  </ul> -->
-</div>  
+  <!-- Home Component -->
+  <app-home 
+    *ngIf="currentComponent === 'home'" 
+    (switchComponent)="showComponent($event)">
+  </app-home>
+</div>
 
+<!-- Login Form Component -->
+<app-login-form 
+  *ngIf="currentComponent === 'signup'">
+</app-login-form>
+
+<!-- Register Form Component -->
+<app-register-form 
+  *ngIf="currentComponent === 'register'">
+</app-register-form>
+
+<app-footer></app-footer>

@@ -22,6 +22,12 @@ export class AppComponent implements OnInit {
   title = 'DatingApp';
   users: any;
 
+  currentComponent: string = 'home';
+
+  showComponent(component: string) {
+    this.currentComponent = component;
+  }
+
   ngOnInit(): void
   {
     this.getUsers();

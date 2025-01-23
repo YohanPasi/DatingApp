@@ -1,0 +1,109 @@
+<main>
+  <!-- Carousel -->
+  <div id="myCarousel" class="carousel slide mb-6 shadow-lg rounded" data-bs-ride="carousel">
+    <div class="carousel-indicators">
+      <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="0" class="active" aria-label="Slide 1"
+        aria-current="true"></button>
+      <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+      <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+    </div>
+    <div class="carousel-inner rounded">
+      <div class="carousel-item active">
+        <img class="w-100" src="assets/images/image1.jpg" alt="First Slide" style="object-fit: cover; height: 500px;">
+        <div class="container">
+          <div class="carousel-caption text-start"
+            style="background: linear-gradient(90deg, rgba(255,255,255,0.9) 0%, rgba(255,255,255,0.7) 100%); padding: 1rem; border-radius: 8px;">
+            <h1 class="text-dark fw-bold">Welcome to Our Service</h1>
+            <p class="text-dark opacity-75 fs-5">Experience the future with us. Your satisfaction is our priority.</p>
+            <p>
+            <div class="d-flex justify-content-center align-items-center mb-4">
+              <button (click)="navigateToSignup()" class="btn btn-primary btn-lg shadow-sm me-3" style="width: 150px;">
+                Login
+              </button>
+              <button (click)="navigateToRegister()" class="btn btn-primary btn-lg shadow-sm" style="width: 150px;">
+                Sign Up
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <img class="d-block w-100" src="assets/images/image2.jpg" alt="Second Slide"
+          style="object-fit: cover; height: 500px;">
+        <div class="container">
+          <div class="carousel-caption" style="background: rgba(0,0,0,0.6); padding: 1rem; border-radius: 8px;">
+            <h1 class="text-white fw-bold">Explore Amazing Features</h1>
+            <p class="text-white-50 fs-5">Discover the tools and capabilities that set us apart.</p>
+            <p>
+              <a class="btn btn-light btn-lg shadow-sm" href="#">Learn More</a>
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <img class="d-block w-100" src="assets/images/image3.jpg" alt="Third Slide"
+          style="object-fit: cover; height: 500px;">
+        <div class="container">
+          <div class="carousel-caption text-end"
+            style="background: linear-gradient(to top, rgba(0,0,0,0.8), rgba(0,0,0,0.4)); padding: 1rem; border-radius: 8px;">
+            <h1 class="text-white fw-bold">Join Us Today</h1>
+            <p class="text-white-50 fs-5">Become part of an ever-growing community.</p>
+            <p>
+              <a class="btn btn-primary btn-lg shadow-sm" href="#">Get Started</a>
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#myCarousel" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"
+        style="background-color: rgba(0,0,0,0.5); border-radius: 50%;"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#myCarousel" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"
+        style="background-color: rgba(0,0,0,0.5); border-radius: 50%;"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+  </div>
+  <!-- Marketing messaging and featurettes -->
+  <div class="container marketing mt-5">
+    <hr class="featurette-divider">
+    <div class="row featurette mb-5">
+      <div class="col-md-7">
+        <h2 class="featurette-heading fw-bold lh-1 mb-3">First Featurette <span class="text-primary">It’ll Blow Your
+            Mind</span></h2>
+        <p class="lead text-muted">Engage with our exciting content and discover groundbreaking solutions.</p>
+      </div>
+      <div class="col-md-5">
+        <img class="featurette-image img-fluid rounded shadow-lg" src="assets/images/fimage1.jpg" alt="Feature Image"
+          style="object-fit: cover; height: 300px; width: 100%;">
+      </div>
+    </div>
+    <hr class="featurette-divider">
+    <div class="row featurette mb-5">
+      <div class="col-md-7 order-md-2">
+        <h2 class="featurette-heading fw-bold lh-1 mb-3">Oh Yeah, It’s That Good <span class="text-success">See For
+            Yourself</span></h2>
+        <p class="lead text-muted">Explore content designed to showcase the best of what we have to offer.</p>
+      </div>
+      <div class="col-md-5 order-md-1">
+        <img class="featurette-image img-fluid rounded shadow-lg" src="assets/images/fimage2.jpg" alt="Feature Image"
+          style="object-fit: cover; height: 300px; width: 100%;">
+      </div>
+    </div>
+    <hr class="featurette-divider">
+    <div class="row featurette mb-5">
+      <div class="col-md-7">
+        <h2 class="featurette-heading fw-bold lh-1 mb-3">And Lastly, This One <span class="text-danger">Checkmate</span>
+        </h2>
+        <p class="lead text-muted">Content that's thoughtfully curated to leave a lasting impression.</p>
+      </div>
+      <div class="col-md-5">
+        <img class="featurette-image img-fluid rounded shadow-lg" src="assets/images/fimage3.jpg" alt="Feature Image"
+          style="object-fit: cover; height: 300px; width: 100%;">
+      </div>
+    </div>
+    <hr class="featurette-divider">
+  </div>
+</main>

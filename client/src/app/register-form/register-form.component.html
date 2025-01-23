@@ -1,0 +1,36 @@
+<main class="d-flex justify-content-center align-items-center vh-100" style="background-color: #e9ecef;">
+    <form (ngSubmit)="register()" #registerForm="ngForm" class="container form-signin p-4 shadow-lg rounded" style="
+        max-width: 400px; 
+        width: 100%; 
+        background: linear-gradient(135deg, #ffffff, #f8f9fa); 
+        border: 1px solid #dee2e6;">
+        <h1 class="h3 mb-4 fw-bold text-center text-primary">Sign Up</h1>
+
+        <div class="form-floating mb-3">
+            <input type="text" class="form-control border-primary" id="floatingInput" placeholder="Enter User Name Here"
+                name="username" [(ngModel)]="model.userName" style="border-width: 2px;">
+            <label for="floatingInput" class="text-secondary">User  Name</label>
+        </div>
+
+        <div class="form-floating mb-4">
+            <input type="password" class="form-control border-primary" id="floatingPassword"
+                placeholder="Enter Password Here" name="password" [(ngModel)]="model.password"
+                style="border-width: 2px;">
+            <label for="floatingPassword" class="text-secondary">Password</label>
+        </div>
+
+        <button class="btn btn-primary w-100 py-2 fw-bold shadow rounded-pill mb-3" type="submit"
+            style="font-size: 1.1rem; letter-spacing: 0.5px; transition: background-color 0.3s, transform 0.3s;"
+            onmouseover="this.style.backgroundColor='#0056b3'; this.style.transform='scale(1.05)';"
+            onmouseout="this.style.backgroundColor=''; this.style.transform='scale(1)';">Sign Up</button>
+
+        <button class="btn btn-success w-100 py-2 fw-bold shadow rounded-pill" (click)="cancel()" type="button"
+            style="font-size: 1.1rem; letter-spacing: 0.5px; transition: background-color 0.3s, transform 0.3s;"
+            onmouseover="this.style.backgroundColor='#28a745'; this.style.transform='scale(1.05)';"
+            onmouseout="this.style.backgroundColor=''; this.style.transform='scale(1)';">Cancel</button>
+
+        <p class="mt-4 mb-0 text-center text-muted" style="font-size: 0.9rem;">Already have an account? <a href="#" class="text-primary">Log in</a></p>
+
+        <p class="mt-5 mb-3 text-body-secondary text-center">© 2024–2025 All rights reserved.</p>
+    </form>
+</main>
