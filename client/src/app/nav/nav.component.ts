@@ -9,8 +9,7 @@ import { AccountService } from '../_services/account.service';
 })
 export class NavComponent {
 
-  private accountService = inject(AccountService);
-  loggedIn = false;
+  accountService = inject(AccountService);
 
   model: any = {};
 
@@ -18,7 +17,6 @@ export class NavComponent {
     this.accountService.login(this.model).subscribe({
       next: Response => {
         console.log(Response);
-        this.loggedIn = true;
         
       },
       error: error => console.log(error)
@@ -27,7 +25,7 @@ export class NavComponent {
   }
 
   logout(){
-    this.loggedIn = false;
+    this.accountService.logout();
   }
 
 }
